@@ -1,8 +1,10 @@
-# First file
 const Client = require('node-xmpp-client') 
+
 const options = { 
-  jid: 'bot@localhost', 
-  password: 'tellnoone' 
+  jid: 'bot@localhost.buddycloud.org', 
+  password: 'b',
+  host: 'localhost.buddycloud.org', 
+  resource: 'echo' 
 } 
 const client = new Client(options) 
 client.once('online', (connectionDetails) => { 
