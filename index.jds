@@ -1,1 +1,11 @@
 # First file
+const Client = require('node-xmpp-client') 
+const options = { 
+  jid: 'bot@localhost', 
+  password: 'tellnoone' 
+} 
+const client = new Client(options) 
+client.once('online', (connectionDetails) => { 
+  console.log('We are connected!') 
+  console.log(connectionDetails) 
+}) 
